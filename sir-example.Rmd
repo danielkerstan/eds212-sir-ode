@@ -19,10 +19,13 @@ library(deSolve)
 init <- c(S = 1-1e-6, I = 1e-6, R = 0.0)
 
 ## beta: infection parameter; gamma: recovery parameter
-parameters <- c(beta = 2.316, gamma = 0.261)
+# changed infection parameter from 2.316 to 4
+# changed recovery parameter from 0.261 to 0.05
+parameters <- c(beta = 4, gamma = 0.05)
 
 ## Time frame
-times      <- seq(0, 100, by = 0.5)
+# changed time frame to 25 from 100
+times      <- seq(0, 25, by = 0.5)
 ```
 
 ## Create the function with the differential equations:
